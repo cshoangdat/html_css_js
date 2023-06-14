@@ -1,0 +1,13 @@
+{
+  "Control": {
+    "LIGHT": "OFF",
+    "LIGHT1 Value": "4",
+    "LIGHT2 Value": "3",
+    "LIGHT3 Value": "1"
+  },
+  "Sensor": {
+    "temp1": 20,
+    "temp2": 30,
+    "temp3": 40
+  }
+}

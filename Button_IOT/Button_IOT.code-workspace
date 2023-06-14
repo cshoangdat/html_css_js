@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../fontawesome-free-5.15.4-web"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Button_IOT"
+	}
+}

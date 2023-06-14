@@ -1,0 +1,376 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    font-family:"Lato", sans-serif;
+    font-size: 15px;
+}
+.header{
+    background-color: rgba(41,48,59,1);
+    height: 70px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.header .header-content{
+    color: #fff;
+    text-transform:uppercase;
+    font-size: 40px;
+}
+.header .header-icon{
+    color: #fff;
+    padding-right: 10px;
+    line-height: 70px;
+    font-size: 40px;
+}
+.body-content{
+    height: 650px;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-top: 70px;
+}
+.body-content .menu{
+    background-color: #fff;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    position: absolute;
+}
+
+.body-content .menu .menu-list{
+    color: #fff;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.body-content .menu .menu-list .menu-list-icon{
+    margin-bottom: 5px;
+}
+
+.body-content .menu .menu-list li .menu-button:hover,
+.body-content .menu .menu-list li .menu-button.hover
+{
+    background-color: #ccc;
+}
+
+.body-content .menu .menu-list li .menu-button{
+    text-decoration: none;
+    color: #404040;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 16px;
+    justify-content: center;
+    margin-top: 4px;
+    height: 80px;
+    width: 120px;
+}
+
+.body-content #living_room .main_content{
+    right: 0;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    background-image: url(./img/r-architecture-wot0Q5sg91E-unsplash.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.body-content #kitchen_room .main_content{
+    right: 0;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    background-image: url(./img/251412-thiet-ke-phong-bep-thong-minh-nha-cap-4.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.body-content #bed_room .main_content{
+    right: 0;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    background-image: url(./img/H\ 1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.main_content .sensor .sensor-list{
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.main_content .sensor .sensor-list li{
+    text-decoration: none;
+    color: #404040;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    justify-content: center;
+    margin-top: 4px;
+    height: 200px;
+    width: 22%;
+    flex-direction: column;
+    border: #ccc solid 0.1px;
+    font-size: 20px;
+}
+
+.main_content .sensor .sensor-list .sensor-list-icon{
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+#bed_room .main_content .control .control-list-5,
+#kitchen_room .main_content .control .control-list-3,
+#living_room .main_content .control .control-list-1
+{
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    bottom: 220px;
+    margin-left: 20px;
+}
+
+/* .main_content .control .control-list-1 #tv-img
+{
+    width: 35%;
+    margin-bottom: 10px;
+} */
+#living_room .main_content .control .control-list-1 #light-img,
+#living_room .main_content .control .control-list-1 #fan-img,
+#living_room .main_content .control .control-list-1 #tv-img,
+#living_room .main_content .control .control-list-2 #lock-img,
+#living_room .main_content .control .control-list-2 #air-img,
+#living_room .main_content .control .control-list-2 #cam-img,
+#kitchen_room .main_content .control .control-list-3 #oven-img,
+#kitchen_room .main_content .control .control-list-3 #fan2-img,
+#kitchen_room .main_content .control .control-list-3 #light2-img,
+#kitchen_room .main_content .control .control-list-4 #cam2-img,
+#kitchen_room .main_content .control .control-list-4 #vac-img,
+#kitchen_room .main_content .control .control-list-4 #stove-img,
+#bed_room .main_content .control .control-list-5 #air2-img,
+#bed_room .main_content .control .control-list-5 #light3-img,
+#bed_room .main_content .control .control-list-5 #fan3-img,
+#bed_room .main_content .control .control-list-6 #pc-img,
+#bed_room .main_content .control .control-list-6 #vac2-img,
+#bed_room .main_content .control .control-list-6 #cam3-img
+{
+    width:80px;
+    margin-bottom: 20px;
+}
+#device1-content,
+#device2-content,
+#device3-content,
+#device4-content,
+#device5-content,
+#device6-content,
+#device7-content,
+#device8-content,
+#device9-content,
+#device10-content,
+#device11-content,
+#device12-content,
+#device13-content,
+#device14-content,
+#device15-content,
+#device16-content,
+#device17-content,
+#device18-content
+{
+    margin-top:0px;
+    margin-bottom: 15px;
+    box-sizing: content-box;
+}
+#light-sliderNgang,
+#air-sliderNgang,
+#fan-sliderNgang,
+#light2-sliderNgang,
+#fan2-sliderNgang,
+#air2-sliderNgang,
+#light3-sliderNgang,
+#fan3-sliderNgang
+{
+    margin-left: 5px;
+    width: 40%;
+}
+
+#living_room .main_content .control .control-list-1 .control-content,
+#living_room .main_content .control .control-list-2 .control-content,
+#kitchen_room .main_content .control .control-list-3 .control-content,
+#kitchen_room .main_content .control .control-list-4 .control-content,
+#bed_room .main_content .control .control-list-5 .control-content,
+#bed_room .main_content .control .control-list-6 .control-content
+{
+    line-height: 33px;
+}
+
+#bed_room .main_content .control .control-list-6,
+#kitchen_room .main_content .control .control-list-4,
+#living_room .main_content .control .control-list-2{
+    list-style: none;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    bottom: 10px;
+    margin-left: 20px;
+}
+
+#living_room .main_content .control .control-list-1 li,
+#living_room .main_content .control .control-list-2 li,
+#kitchen_room .main_content .control .control-list-3 li,
+#kitchen_room .main_content .control .control-list-4 li,
+#bed_room .main_content .control .control-list-5 li,
+#bed_room .main_content .control .control-list-6 li
+{
+    text-decoration: none;
+    color: #404040;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    justify-content: center;
+    height: 200px;
+    width: 22%;
+    flex-direction: column;
+    border: #ccc solid 0.1px;
+    font-size: 20px;
+    margin-right: 42px;
+    align-content: space-around;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.footer{
+    background-image: url(./img/background-go_113443610.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top:100%;
+    right:0;
+    color: #000;
+}
+.footer .footer-img{
+    width:200px;
+    height: 260px;
+    clip-path: circle(80px at 50% 65%);
+    margin-top: -80px;
+    margin-left: -150px;
+}
+.footer .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .footer-content >span >p{
+    padding-top: 30px;
+    letter-spacing: 4px;
+}
+.footer .footer-list >ul>li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.footer .footer-list>ul>li>span>a{
+    color: #000;
+}
+
+.footer .footer-list{
+    padding-left: 200px;
+    margin-top: -20px;
+}
+.footer .footer-icon{
+    padding-right: 10px;
+    font-size: 24px;
+    font-weight: 900;
+}

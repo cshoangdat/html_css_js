@@ -1,0 +1,20 @@
+{
+  "Control": {
+    "AIR CONDITION": "ON",
+    "AIR CONDITION Value": "27",
+    "CAM": "ON",
+    "FAN": "ON",
+    "FAN Value": "2",
+    "LIGHT": "OFF",
+    "LIGHT Value": "2",
+    "LOCK": "LOCK",
+    "Light": "ON",
+    "TV": "ON"
+  },
+  "Sensor": {
+    "gas": 20,
+    "humid": 65,
+    "light": 1,
+    "temp": 32
+  }
+}

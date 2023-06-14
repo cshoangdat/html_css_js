@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css.css">
+    <link rel="stylesheet" href="./assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <title>My SmartHome</title>
+</head>
+<body>
+    <div class = "main">
+        <div class = "header">
+            <img id = "denId_01" class = "header-icon" src="./assets/img/icons8-light-off-80.png" alt="">
+            <h2 class = "header-content">
+                Hoàng Thành Đạt <br>
+                20119214
+            </h2>
+            <div class = btn>
+                <button class = "bt_on" id = "btnOnId_01">ON</button>
+                <br>
+                <button class = "bt_off" id = "btnOffId_01">OFF</button>
+            </div>
+        </div>
+        <div class = "body-content">
+            <div class = "control">
+                <ul class = "control-list-1">
+                    <li class = "list_1">
+                        <h3 id = "device1-content">Phòng Khách</h3>
+                        <img id = "light-img1" src="./assets/img/icons8-light-off-80.png" alt="">
+                        <span class = "control-content">
+                            <div>
+                                <input type="range" min = "0" max = "5" value = "1" id ="light-sliderNgang1">
+                                <span id = "light-sliderNgangValue1">OFF</span>
+                            </div>
+                            <span class = "sensor-list-content">Nhiệt Độ: <span id="nhietdo1">None</span><span> ℃</span></span>
+                        </span>
+                    </li>
+                    <li class = "list_2">
+                        <h3 id = "device2-content">Phòng Bếp</h3>
+                        <img id = "light-img2" src="./assets/img/icons8-light-off-80.png" alt="">
+                        <span class = "control-content">
+                            <div>
+                                <input type="range" min = "0" max = "5" value = "1" id ="light-sliderNgang2">
+                                <span id = "light-sliderNgangValue2">OFF</span>
+                            </div>
+                            <span class = "sensor-list-content">Nhiệt Độ: <span id="nhietdo2">None</span><span> ℃</span></span>
+                        </span>
+                    </li>
+                </ul>
+                <div class = control2_pos>
+                    <div class = control2>
+                        <h3 id = "device3-content">Phòng Ngủ</h3>
+                        <img id = "light-img3" src="./assets/img/icons8-light-off-80.png" alt="">
+                        <span class = "control-content">
+                            <div>
+                                <input type="range" min = "0" max = "5" value = "1" id ="light-sliderNgang3">
+                                <span id = "light-sliderNgangValue3">OFF</span>
+                            </div>
+                            <span class = "sensor-list-content">Nhiệt Độ: <span id="nhietdo3">None</span><span> ℃</span></span>
+                        </span>    
+                    </div>
+                </div>
+        </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+    <script src= "./assets/script.js"> </script>
+</body>
+</html>

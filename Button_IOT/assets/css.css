@@ -1,0 +1,35 @@
+.title,
+.content{
+    text-align: center;
+    font-size: large;
+}
+
+.title{
+    text-transform: uppercase;
+    line-height: 2rem;
+    font-size: x-large;
+}
+
+.sub-content{
+    line-height: 5rem;
+    padding-top: 20px;
+    color: #aaa;
+}
+
+.button{
+    cursor: pointer;
+    padding: 1.3rem;
+    border-radius: 5px;
+}
+
+.button__on{
+    background-color: #66FF00;
+    color: #FFFFFF;
+    padding: 22px 52px;
+}
+
+.button__off{
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 21px 50px;
+}

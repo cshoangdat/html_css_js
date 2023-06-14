@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css.css">
+    <link rel="stylesheet" href="./assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <title>My SmartHome</title>
+</head>
+<body>
+    <div class = "main">
+        <div class = "header">
+            <i class="header-icon fas fa-house-user"></i>
+            <h2 class = "header-content">Smart Home</h2>
+        </div>
+        <div class = "body-content">
+            <div class = "menu">
+                <ul class = "menu-list">
+                    <li><a class ="menu-button js-menu-button" href="#" onclick="switchPage(event, 'living_room')"><i class="active menu-list-icon fas fa-tv"></i>Phòng Khách</a></li>
+                    <li><a class ="menu-button js-menu-button" href="#" onclick="switchPage(event, 'kitchen_room')"><i class="menu-list-icon fas fa-utensils"></i>Phòng Bếp</a></li>
+                    <li><a class ="menu-button js-menu-button" href="#" onclick="switchPage(event, 'bed_room')"><i class="menu-list-icon fas fa-bed"></i>Phòng Ngủ</a></li>
+                </ul>
+            </div>
+            <section id = "living_room">
+                <div class = "main_content">
+                    <div class = sensor>
+                        <ul class = "sensor-list">
+                            <li><img class = "sensor-list-icon" src="./assets/img/temperature.png" alt=""> <span class = "sensor-list-content">Nhiệt Độ: <span id="nhietdo">None</span><span> ℃</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/humidity.png" alt=""> <span class = "sensor-list-content">Độ ẩm: <span id="doam">None</span><span> %</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/gas.png" alt=""> <span class = "sensor-list-content">Nồng độ khí gas: <span id="khigas">None</span><span> %</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/contrast.png" alt=""><span class = "sensor-list-content">Ánh sáng: <span id="anhsang">None</span></span></li>
+                        </ul>
+                    </div>
+                    <div class = "control">
+                        <ul class = "control-list-1">
+                            <li>
+                                <h3 id = "device1-content">Thiết bị 1: TV</h3>
+                                <img id = "tv-img" src="./assets/img/icons8-tv-off-100.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="tv-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "tv-state">OFF</span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device2-content">Thiết bị 2: Đèn</h3>
+                                <img id = "light-img" src="./assets/img/icons8-light-off-80.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="light-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "light-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "1" max = "3" value = "1" id ="light-sliderNgang">
+                                        <span id = "light-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device3-content">Thiết bị 3: Quạt</h3>
+                                <img id = "fan-img" src="./assets/img/icons8-fan-off-96.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="fan-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "fan-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "1" max = "3" value = "1" id ="fan-sliderNgang">
+                                        <span id = "fan-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class = "control-list-2">
+                            <li>
+                                <h3 id = "device4-content">Thiết bị 4: Khóa cửa</h3>
+                                <img id = "lock-img" src="./assets/img/padlock.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="lock-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "lock-state">LOCK</span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device5-content">Thiết bị 5: Máy lạnh</h3>
+                                <img id = "air-img" src="./assets/img/air-conditioner-off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="air-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "air-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "16" max = "32" value = "16" id ="air-sliderNgang">
+                                        <span id = "air-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device6-content">Thiết bị 6: Camera</h3>
+                                <img id = "cam-img" src="./assets/img/icons8-wall-mount-camera-96-off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="cam-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "cam-state">OFF</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id = "kitchen_room" style="display:none">
+                <div class = "main_content">
+                    <div class = sensor>
+                        <ul class = "sensor-list">
+                            <li><img class = "sensor-list-icon" src="./assets/img/temperature.png" alt=""> <span class = "sensor-list-content">Nhiệt Độ: <span id="nhietdo">None</span><span> ℃</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/humidity.png" alt=""> <span class = "sensor-list-content">Độ ẩm: <span id="do am">None</span><span> %</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/gas.png" alt=""> <span class = "sensor-list-content">Nồng độ khí gas: <span id="khi gas">None</span><span> %</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/contrast.png" alt=""><span class = "sensor-list-content">Ánh sáng: <span id="anh sang">None</span></span></li>
+                        </ul>
+                    </div>
+                    <div class = "control">
+                        <ul class = "control-list-3">
+                            <li>
+                                <h3 id = "device7-content">Thiết bị 1: Bếp điện</h3>
+                                <img id = "oven-img" src="./assets/img/stove_off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="oven-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "oven-state">OFF</span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device8-content">Thiết bị 2: Đèn</h3>
+                                <img id = "light2-img" src="./assets/img/icons8-light-off-80.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="light2-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "light2-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "1" max = "3" value = "1" id ="light2-sliderNgang">
+                                        <span id = "light2-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device9-content">Thiết bị 3: Quạt</h3>
+                                <img id = "fan2-img" src="./assets/img/icons8-fan-off-96.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="fan2-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "fan2-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "1" max = "3" value = "1" id ="fan2-sliderNgang">
+                                        <span id = "fan2-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class = "control-list-4">
+                            <li>
+                                <h3 id = "device10-content">Thiết bị 4: Robot Hút bụi</h3>
+                                <img id = "vac-img" src="./assets/img/vacuum-cleaner_off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="vac-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "vac-state">OFF</span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device11-content">Thiết bị 5: Lò vi sóng</h3>
+                                <img id = "stove-img" src="./assets/img/oven_off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="stove-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "stove-state">OFF</span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device12-content">Thiết bị 6: Camera</h3>
+                                <img id = "cam2-img" src="./assets/img/icons8-wall-mount-camera-96-off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="cam2-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "cam2-state">OFF</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id = "bed_room" style="display:none">
+                <div class = "main_content">
+                    <div class = sensor>
+                        <ul class = "sensor-list">
+                            <li><img class = "sensor-list-icon" src="./assets/img/temperature.png" alt=""> <span class = "sensor-list-content">Nhiệt Độ: <span id="nhietdo">None</span><span> ℃</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/humidity.png" alt=""> <span class = "sensor-list-content">Độ ẩm: <span id="do am">None</span><span> %</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/gas.png" alt=""> <span class = "sensor-list-content">Nồng độ khí gas: <span id="khi gas">None</span><span> %</span></span></li>
+                            <li><img class = "sensor-list-icon" src="./assets/img/contrast.png" alt=""><span class = "sensor-list-content">Ánh sáng: <span id="anh sang">None</span></span></li>
+                        </ul>
+                    </div>
+                    <div class = "control">
+                        <ul class = "control-list-5">
+                            <li>
+                                <h3 id = "device13-content">Thiết bị 1: Máy lạnh</h3>
+                                <img id = "air2-img" src="./assets/img/air-conditioner-off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="air2-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "air2-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "16" max = "32" value = "16" id ="air2-sliderNgang">
+                                        <span id = "air2-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device14-content">Thiết bị 2: Đèn</h3>
+                                <img id = "light3-img" src="./assets/img/icons8-light-off-80.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="light3-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "light3-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "1" max = "3" value = "1" id ="light3-sliderNgang">
+                                        <span id = "light3-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device15-content">Thiết bị 3: Quạt</h3>
+                                <img id = "fan3-img" src="./assets/img/icons8-fan-off-96.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="fan3-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "fan3-state">OFF</span>
+                                    <span>
+                                        <input type="range" min = "1" max = "3" value = "1" id ="fan3-sliderNgang">
+                                        <span id = "fan3-sliderNgangValue">OFF</span>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class = "control-list-6">
+                            <li>
+                                <h3 id = "device16-content">Thiết bị 4: Robot Hút bụi</h3>
+                                <img id = "vac2-img" src="./assets/img/vacuum-cleaner_off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="vac2-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "vac2-state">OFF</span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device17-content">Thiết bị 5: Máy tính</h3>
+                                <img id = "pc-img" src="./assets/img/computer_off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="pc-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "pc-state">OFF</span>
+                                </span>
+                            </li>
+                            <li>
+                                <h3 id = "device18-content">Thiết bị 6: Camera</h3>
+                                <img id = "cam3-img" src="./assets/img/icons8-wall-mount-camera-96-off.png" alt="">
+                                <span class = "control-content">
+                                    <label class="switch">
+                                        <input id ="cam3-switch" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                    <span id = "cam3-state">OFF</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class = "footer">
+                <span class = "footer-content">
+                    <img class ="footer-img" src="./assets/img/IMG_20221229_134351.jpg" alt="">
+                    <span>
+                        <p>
+                            <h3>THÔNG TIN:</h3>
+                            Họ và tên: Hoàng Thành Đạt <br>
+                            Tuổi: 20 <br>
+                            Giới tính: Nam <br>
+                            MSSV: 20119214 <br>
+                            Ngành học: Công nghệ kĩ thuật máy tính <br>
+                            Tình trạng hôn nhân: không <br>
+                            Tôn giáo: Không <br>
+                        </p>
+                    </span>
+                    <span class = "footer-list">
+                        <ul>
+                            <li><span><i class=" footer-icon fab fa-facebook-square"></i> <span>Facebook: </span><a href="https://www.facebook.com/dathoang240722">Đạt Hoàng</a></span></li>
+                            <li><span><i class=" footer-icon far fa-envelope"></i><span>Gmail: </span><a href="mailto:dathoangcet@gmail.com">dathoangcet@gmail.com</a></span></li>
+                            <li><span><i class=" footer-icon fas fa-mobile-alt"></i> <span>Phone: </span> <a href="tel:+84363604119">+84363604119</a></span></li>
+                        </ul>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script> 
+    <script src= "./assets/script.js"> </script>
+</body>
+</html>

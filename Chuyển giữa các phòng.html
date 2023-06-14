@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IoT Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function switchPage(evt, pageName) {
+        var i, sections, links;
+        sections = document.getElementsByTagName("section");
+        for (i = 0; i < sections.length; i++) {
+          sections[i].style.display = "none";
+        }
+        links = document.getElementsByClassName("active");
+        for (i = 0; i < links.length; i++) {
+          links[i].classList.remove("active");
+        }
+        var targetSection = document.getElementById(pageName);
+        if (targetSection.style.display !== "flex") {
+          targetSection.style.display = "flex";
+          evt.currentTarget.classList.add("active");
+	      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>IoT Dashboard</h1>
+  </header>
+  <main>
+    <nav>
+			<ul class="menu">
+				<li><a href="#" class="active" onclick="switchPage(event, 'living_room')">Living Room</a></li>
+				<li><a href="#" onclick="switchPage(event, 'bed_room')">Bed Room</a></li>
+				<li><a href="#" onclick="switchPage(event, 'kitchen')">Kitchen</a></li>
+				<li><a href="#" onclick="switchPage(event, 'bath_room')">Bath Room</a></li>
+			</ul>
+		</nav>
+		<section id="living_room" >
+      <article>
+        <h2>Temperature</h2>
+        <p>23°C</p>
+      </article>
+      <article>
+        <h2>Humidity</h2>
+        <p>45%</p>
+      </article>
+      <article>
+        <h2>Light Level</h2>
+        <p>50%</p>
+      </article>
+      <article>
+        <h2>CO2 Level</h2>
+        <p>450 ppm</p>
+      </article>
+    </section>
+    <section id="bed_room" style="display:none">
+      <article>
+        <h2>Temperature</h2>
+        <p>23°C</p>
+      </article>
+      <article>
+        <h2>Humidity</h2>
+        <p>45%</p>
+      </article>
+    </section>
+      <section id="kitchen" style="display:none">  
+    </section>
+    <section id="bath_room" style="display:none">
+    <p>ok
+    </p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 IoT Dashboard</p>
+  </footer>
+</body>
+</html>
